@@ -14,7 +14,7 @@
     _1password-cli
     _1password-gui
     proton-vpn-cli
-    protonvpn-gui
+    proton-vpn
 
     ungoogled-chromium
   ];
