@@ -14,5 +14,8 @@
     hurl
     kakoune
     zed-editor
+
+    jetbrains.phpstorm
+    jetbrains.pycharm-professional
   ];
 }
