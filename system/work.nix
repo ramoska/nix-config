@@ -22,6 +22,14 @@
         name = "bruno";
         greedy = true;
       }
+      {
+        name = "phpstorm";
+        greedy = true;
+      }
+      {
+        name = "pycharm";
+        greedy = true;
+      }
     ];
   };
 }
