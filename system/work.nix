@@ -19,10 +19,6 @@
         greedy = true;
       }
       {
-        name = "spotify";
-        greedy = true;
-      }
-      {
         name = "bruno";
         greedy = true;
       }

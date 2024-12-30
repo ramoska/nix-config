@@ -29,6 +29,14 @@
         name = "firefox";
         greedy = true;
       }
+      {
+        name = "spotify";
+        greedy = true;
+      }
+      {
+        name = "ghostty";
+        greedy = true;
+      }
     ];
     onActivation = {
       cleanup = "zap";
