@@ -22,10 +22,6 @@
         greedy = true;
       }
       {
-        name = "kitty";
-        greedy = true;
-      }
-      {
         name = "firefox";
         greedy = true;
       }
