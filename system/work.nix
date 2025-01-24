@@ -3,8 +3,9 @@
 {
   users.users."irmantas.ramoska".home = "/Users/irmantas.ramoska";
 
+  programs.direnv.enable = true;
+
   environment.systemPackages = with pkgs; [
-    php
   ];
   homebrew = {
     brews = ["minikube"];
