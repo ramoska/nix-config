@@ -8,10 +8,10 @@
   environment.systemPackages = with pkgs; [
   ];
   homebrew = {
-    brews = ["minikube"];
+    brews = ["minikube" "podman" "podman-compose"];
     casks = [
       {
-        name = "docker";
+        name = "podman-desktop";
         greedy = true;
       }
       {
