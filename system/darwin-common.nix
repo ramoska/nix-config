@@ -1,7 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  services.nix-daemon.enable = true;
   security.pam.enableSudoTouchIdAuth = true;
 
   # Set Git commit hash for darwin-version.
