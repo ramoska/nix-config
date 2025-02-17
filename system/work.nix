@@ -11,6 +11,10 @@
     brews = ["minikube" "podman" "podman-compose" "docker" "docker-compose"];
     casks = [
       {
+        name = "google-cloud-sdk";
+        greedy = true;
+      }
+      {
         name = "podman-desktop";
         greedy = true;
       }
