@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 {
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam.services.sudo_local.touchIdAuth = true;
 
   # Set Git commit hash for darwin-version.
   system.stateVersion = 5;
