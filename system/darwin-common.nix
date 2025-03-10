@@ -32,6 +32,10 @@
         name = "ghostty";
         greedy = true;
       }
+      {
+        name = "obsidian";
+        greedy = true;
+      }
     ];
     onActivation = {
       cleanup = "zap";
