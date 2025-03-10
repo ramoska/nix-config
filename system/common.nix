@@ -20,5 +20,6 @@
     neofetch
     jujutsu
     openssh
+    git
   ];
 }
