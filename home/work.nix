@@ -9,9 +9,7 @@
 
   home.packages = with pkgs; [
     tig
-    kubectl
     hurl
-    kakoune
-    zed-editor
+    helix
   ];
 }

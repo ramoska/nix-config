@@ -7,8 +7,10 @@
 
   environment.systemPackages = with pkgs; [
   ];
+
   homebrew = {
-    brews = ["minikube" "podman" "podman-compose" "docker" "docker-compose"];
+    brews = [ "podman" "podman-compose" "docker" "docker-compose" "kubelogin" "kubectl" ];
+
     casks = [
       {
         name = "google-cloud-sdk";
