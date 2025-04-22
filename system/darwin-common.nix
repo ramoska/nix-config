@@ -8,6 +8,7 @@
 
   environment.systemPackages = with pkgs; [
     raycast
+    spotify
   ];
 
   homebrew = {
@@ -22,10 +23,6 @@
       }
       {
         name = "firefox";
-        greedy = true;
-      }
-      {
-        name = "spotify";
         greedy = true;
       }
       {
