@@ -9,7 +9,7 @@
   ];
 
   homebrew = {
-    brews = [ "podman" "podman-compose" "docker" "docker-compose" "kubelogin" "kubectl" ];
+    brews = [ "podman" "podman-compose" "kubelogin" "kubectl" ];
 
     casks = [
       {
