@@ -2,6 +2,7 @@
 
 {
   users.users."irmantas.ramoska".home = "/Users/irmantas.ramoska";
+  system.primaryUser = "irmantas.ramoska";
 
   programs.direnv.enable = true;
 
