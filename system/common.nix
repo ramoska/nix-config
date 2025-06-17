@@ -12,7 +12,10 @@
     ];
   };
 
-  programs.direnv.enable = true;
+  programs.direnv = {
+    enable = true;
+    silent = true;
+  };
   programs.fish.enable = true;
 
   environment.systemPackages = with pkgs; [
