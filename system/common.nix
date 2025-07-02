@@ -20,9 +20,11 @@
 
   environment.systemPackages = with pkgs; [
     fastfetch
-    neofetch
     jujutsu
     openssh
     git
+    fzf
+    atuin
+    spotify
   ];
 }

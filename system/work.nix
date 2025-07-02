@@ -6,10 +6,6 @@
 
   programs.direnv.enable = true;
 
-  environment.systemPackages = with pkgs; [
-    pyenv pipx
-  ];
-
   homebrew = {
     brews = [ "podman" "podman-compose" "kubelogin" "kubectl" ];
 
