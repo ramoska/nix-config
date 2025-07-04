@@ -22,7 +22,7 @@
         greedy = true;
       }
       {
-        name = "firefox";
+        name = "zen";
         greedy = true;
       }
       {
