@@ -38,6 +38,10 @@
         name = "pycharm";
         greedy = true;
       }
+      {
+        name = "goland";
+        greedy = true;
+      }
     ];
   };
 }
