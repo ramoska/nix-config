@@ -11,7 +11,7 @@
 
     casks = [
       {
-        name = "google-cloud-sdk";
+        name = "gcloud-cli";
         greedy = true;
       }
       {
