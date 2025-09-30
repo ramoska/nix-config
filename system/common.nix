@@ -27,5 +27,6 @@
     atuin
     spotify
     zoxide
+    obsidian
   ];
 }
