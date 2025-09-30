@@ -6,28 +6,19 @@
 
   programs.direnv.enable = true;
 
+  environment.systemPackages = with pkgs; [
+    bruno
+    podman
+    podman-compose
+    kubectl
+    kubelogin-oidc
+    podman-desktop
+    slack
+  ];
   homebrew = {
-    brews = [ "podman" "podman-compose" "kubelogin" "kubectl" ];
-
     casks = [
       {
         name = "gcloud-cli";
-        greedy = true;
-      }
-      {
-        name = "podman-desktop";
-        greedy = true;
-      }
-      {
-        name = "slack";
-        greedy = true;
-      }
-      {
-        name = "google-chrome";
-        greedy = true;
-      }
-      {
-        name = "bruno";
         greedy = true;
       }
       {
