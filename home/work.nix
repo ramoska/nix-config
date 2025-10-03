@@ -9,5 +9,6 @@
 
   home.packages = with pkgs; [
     tig
+    s3cmd
   ];
 }
