@@ -6,9 +6,4 @@
   home.username = "irmantas.ramoska";
 
   programs.home-manager.enable = true;
-
-  home.packages = with pkgs; [
-    tig
-    s3cmd
-  ];
 }

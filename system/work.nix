@@ -14,6 +14,9 @@
     kubelogin-oidc
     podman-desktop
     slack
+    tig
+    s3cmd
+    tree
   ];
   homebrew = {
     casks = [
