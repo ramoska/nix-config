@@ -13,7 +13,7 @@
     kubectl
     kubelogin-oidc
     podman-desktop
-    slack
+    slack  # run defaults write com.tinyspeck.slackmacgap AutoUpdate -bool FALSE
     tig
     s3cmd
     tree
