@@ -25,8 +25,6 @@
     git
     fzf
     atuin
-    spotify
     zoxide
-    obsidian
   ];
 }

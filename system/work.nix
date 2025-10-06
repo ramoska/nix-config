@@ -7,23 +7,17 @@
   programs.direnv.enable = true;
 
   environment.systemPackages = with pkgs; [
-    bruno
     podman
     podman-compose
     kubectl
     kubelogin-oidc
-    podman-desktop
-    slack  # run defaults write com.tinyspeck.slackmacgap AutoUpdate -bool FALSE
+    google-cloud-sdk
     tig
     s3cmd
     tree
   ];
   homebrew = {
     casks = [
-      {
-        name = "gcloud-cli";
-        greedy = true;
-      }
       {
         name = "phpstorm";
         greedy = true;
@@ -34,6 +28,18 @@
       }
       {
         name = "goland";
+        greedy = true;
+      }
+      {
+        name = "slack";
+        greedy = true;
+      }
+      {
+        name = "bruno";
+        greedy = true;
+      }
+      {
+        name = "sequel-ace";
         greedy = true;
       }
     ];

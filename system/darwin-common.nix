@@ -7,7 +7,6 @@
   system.stateVersion = 5;
 
   environment.systemPackages = with pkgs; [
-    raycast
     neovim
   ];
 
@@ -27,6 +26,18 @@
       }
       {
         name = "ghostty";
+        greedy = true;
+      }
+      {
+        name = "raycast";
+        greedy = true;
+      }
+      {
+        name = "spotify";
+        greedy = true;
+      }
+      {
+        name = "obsidian";
         greedy = true;
       }
     ];
