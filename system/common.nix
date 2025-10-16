@@ -26,5 +26,6 @@
     fzf
     atuin
     zoxide
+    nushell
   ];
 }
