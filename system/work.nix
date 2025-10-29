@@ -42,6 +42,10 @@
         name = "sequel-ace";
         greedy = true;
       }
+      {
+        name = "gimp";
+	greedy = true;
+      }
     ];
   };
 }
