@@ -7,7 +7,7 @@
 
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  boo.consoleLogLevel = 3;
+  boot.consoleLogLevel = 3;
 
   networking.networkManager.enable = true;
   
