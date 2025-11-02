@@ -2,7 +2,7 @@
 
 {
   imports = [
-    /etc/nixos/hardware-configuration  # include results of hardware scan
+    /etc/nixos/hardware-configuration.nix  # include results of hardware scan
   ];
 
   boot.loader.systemd-boot.enable = true;
