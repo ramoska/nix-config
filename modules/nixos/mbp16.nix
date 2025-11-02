@@ -1,7 +1,7 @@
 { config, pkgs, nixos-hardware, ... }:
 
 {
-  modules = [
+  imports = [
     nixos-hardware.nixosModules.apple-t2
   ];
 }
