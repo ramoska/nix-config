@@ -28,7 +28,10 @@
 
     nixosModules = {
       all = ./modules/nixos/all.nix;
-      mbp16 = ./modules/nixos/mbp16.nix;
+      mbp16 = {
+        imports = [ ./modules/nixos/mbp16.nix ];
+        _module.args = { inherit nixos-hardware; };
+      };
     };
   };
 }
