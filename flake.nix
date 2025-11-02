@@ -27,7 +27,7 @@
     };
 
     nixosModules = {
-      all = ./modules/nixos;
+      all = ./modules/nixos/all.nix;
     };
   };
 }
