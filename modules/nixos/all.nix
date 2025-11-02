@@ -60,7 +60,7 @@
   };
 
   users.users.ramoska = {
-    inNormalUser = true;
+    isNormalUser = true;
     description = "ramoska";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [];
