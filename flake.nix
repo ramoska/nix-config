@@ -28,6 +28,7 @@
 
     nixosModules = {
       all = ./modules/nixos/all.nix;
+      mbp16 = ./modules/nixos/mbp16.nix;
     };
   };
 }
