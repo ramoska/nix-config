@@ -1,5 +1,0 @@
-{ pkgs, ... }:
-
-{
-  networking.hostName = "desktop";
-}

@@ -1,11 +1,6 @@
 { config, pkgs, ... }:
 
 {
-  users.users."irmantas.ramoska".home = "/Users/irmantas.ramoska";
-  system.primaryUser = "irmantas.ramoska";
-
-  programs.direnv.enable = true;
-
   environment.systemPackages = with pkgs; [
     podman
     podman-compose

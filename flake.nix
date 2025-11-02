@@ -7,42 +7,27 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    nixos-hardware = {
+      url = "github:NixOS/nixos-hardware/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs,  nixos-hardware }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nixos-hardware }:
   {
-    # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#O-MVHJ6XDR
-    darwinConfigurations = {
-      "O-MVHJ6XDR" = nix-darwin.lib.darwinSystem {
-        specialArgs = { inherit inputs; };
-        system = "aarch64-darwin";
-        modules = [
-          ./system/common.nix
-          ./system/darwin-common.nix
-          ./system/work.nix
-        ];
-      };
+    inherit nix-darwin;
+
+    commonModules = {
+      all = ./modules/common/all.nix;
     };
-    nixosConfigurations = {
-      desktop = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./system/common.nix
-          ./system/nixos-common.nix
-          ./system/desktop.nix
-        ];
-      };
-      mbp16 = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-         nixos-hardware.nixosModules.apple-t2
-         ./system/common.nix
-         ./system/nixos-common.nix
-         ./system/mbp16.nix
-        ];
-      };
+
+    darwinModules = {
+      all = ./modules/darwin/all.nix;
+      work = ./modules/darwin/work.nix;
+    };
+
+    nixosModules = {
+      all = ./modules/nixos;
     };
   };
 }

@@ -1,10 +1,6 @@
 { pkgs, ... }:
 
 {
-  imports = [
-    /etc/nixos/hardware-configuration.nix  # include results of hardware scan
-  ];
-
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.consoleLogLevel = 3;
@@ -70,4 +66,3 @@
     packages = with pkgs; [];
   };
 }
-
