@@ -7,13 +7,10 @@
       url = "github:LnL7/nix-darwin";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    home-manager = {
-      url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, home-manager }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs,  nixos-hardware }:
   {
     # Build darwin flake using:
     # $ darwin-rebuild build --flake .#O-MVHJ6XDR
@@ -25,24 +22,25 @@
           ./system/common.nix
           ./system/darwin-common.nix
           ./system/work.nix
-          home-manager.darwinModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users."irmantas.ramoska" = import ./home/work.nix;
-          }
         ];
       };
+    };
+    nixosConfigurations = {
       desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./system/common.nix
           ./system/nixos-common.nix
           ./system/desktop.nix
-          home-manager.nixosModules.home-manager {
-            home-manager.useGlobalPkgs = true;
-            home-manager.useUserPackages = true;
-            home-manager.users."ramoska" = import ./home/desktop.nix;
-          }
+        ];
+      };
+      mbp16 = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+         nixos-hardware.nixosModules.apple-t2
+         ./system/common.nix
+         ./system/nixos-common.nix
+         ./system/mbp16.nix
         ];
       };
     };

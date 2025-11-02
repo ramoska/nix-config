@@ -44,7 +44,7 @@
       }
       {
         name = "gimp";
-	greedy = true;
+        greedy = true;
       }
     ];
   };
