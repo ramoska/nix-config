@@ -37,7 +37,7 @@
   services.gvfs.enable = true;
 
   fonts.fontconfig.enable = true;
-  fonts.fontpackages = with pkgs; [
+  fonts.packages = with pkgs; [
     nerd-fonts.fira-code
     nerd-fonts.monaspace
   ];
