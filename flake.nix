@@ -16,7 +16,7 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, nixos-hardware }:
   {
     inherit nix-darwin;
-    inherit hardware-config;
+    inherit nixos-hardware;
 
     commonModules = {
       all = ./modules/common/all.nix;
