@@ -16,6 +16,7 @@
   outputs = inputs@{ self, nix-darwin, nixpkgs, nixos-hardware }:
   {
     inherit nix-darwin;
+    inherit hardware-config;
 
     commonModules = {
       all = ./modules/common/all.nix;
@@ -28,7 +29,6 @@
 
     nixosModules = {
       all = ./modules/nixos/all.nix;
-      mbp16 = nixos-hardware.nixosModules.apple-t2;
     };
   };
 }

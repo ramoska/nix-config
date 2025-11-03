@@ -48,6 +48,8 @@
     fuzzel
     hyprlock
     hypridle
+    
+    ghostty
   ];
 
   services.pulseaudio.enable = false;
