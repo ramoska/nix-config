@@ -61,6 +61,8 @@
     wireplumber.enable = true;
   };
 
+  programs.firefox.enable = true;
+
   users.users.ramoska = {
     isNormalUser = true;
     description = "ramoska";
