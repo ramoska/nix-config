@@ -10,6 +10,7 @@
     tig
     s3cmd
     tree
+    k3d
   ];
   homebrew = {
     casks = [
