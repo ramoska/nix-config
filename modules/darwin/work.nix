@@ -2,8 +2,9 @@
 
 {
   environment.systemPackages = with pkgs; [
-    podman
-    podman-compose
+    docker
+    docker-compose
+    colima
     kubectl
     kubelogin-oidc
     google-cloud-sdk
