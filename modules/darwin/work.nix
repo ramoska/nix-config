@@ -16,6 +16,9 @@
     jq
   ];
   homebrew = {
+    taps = [
+      "telepresenceio/telepresence"
+    ];
     casks = [
       {
         name = "phpstorm";
@@ -39,6 +42,10 @@
       }
       {
         name = "sequel-ace";
+        greedy = true;
+      }
+      {
+        name = "telepresence-oss";
         greedy = true;
       }
     ];
