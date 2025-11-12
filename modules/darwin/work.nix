@@ -12,6 +12,8 @@
     s3cmd
     tree
     k3d
+    yq
+    jq
   ];
   homebrew = {
     casks = [
