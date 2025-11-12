@@ -13,6 +13,7 @@
     tree
     k3d
     telepresence2
+    kubernetes-helm
     yq
     jq
   ];
