@@ -12,13 +12,11 @@
     s3cmd
     tree
     k3d
+    telepresence2
     yq
     jq
   ];
   homebrew = {
-    taps = [
-      "telepresenceio/telepresence"
-    ];
     casks = [
       {
         name = "phpstorm";
@@ -42,10 +40,6 @@
       }
       {
         name = "sequel-ace";
-        greedy = true;
-      }
-      {
-        name = "telepresence-oss";
         greedy = true;
       }
     ];
