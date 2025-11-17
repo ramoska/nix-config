@@ -16,6 +16,7 @@
     kubernetes-helm
     yq
     jq
+    hyperfine
   ];
   homebrew = {
     casks = [
