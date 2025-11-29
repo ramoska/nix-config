@@ -12,6 +12,7 @@
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nixos-hardware }:
   {
+    inherit nixpkgs;
     inherit nix-darwin;
     inherit nixos-hardware;
 

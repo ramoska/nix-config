@@ -1,0 +1,6 @@
+--target=~/.config
+--ignore=.stowrc
+--ignore=flake.*
+--ignore=modules
+--ignore=.jj
+
