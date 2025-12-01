@@ -10,7 +10,6 @@
     silent = true;
   };
   programs.fish.enable = true;
-  users.defaultUserShell = pkgs.fish;
 
   environment.systemPackages = with pkgs; [
     fastfetch

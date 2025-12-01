@@ -63,6 +63,7 @@
 
   programs.firefox.enable = true;
 
+  users.defaultUserShell = pkgs.fish;
   users.users.ramoska = {
     isNormalUser = true;
     description = "ramoska";
