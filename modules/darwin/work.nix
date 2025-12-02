@@ -4,6 +4,7 @@
   environment.systemPackages = with pkgs; [
     docker
     docker-compose
+    docker-credential-helpers
     colima
     kubectl
     kubelogin-oidc
