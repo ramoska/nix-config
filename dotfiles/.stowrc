@@ -1,6 +1,0 @@
---target=~
---ignore=.stowrc
---ignore=flake.*
---ignore=modules
---dotfiles
-
