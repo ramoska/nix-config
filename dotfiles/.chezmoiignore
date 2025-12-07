@@ -1,0 +1,5 @@
+{{ if ne .chezmoi.os "linux" }}
+.config/Thunar
+.config/niri
+{{ end }}
+

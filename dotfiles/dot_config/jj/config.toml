@@ -1,8 +1,0 @@
-[user]
-name = "Irmantas Ramoška"
-email = "i.ramoshka@gmail.com"
-
-[ui]
-default-command = "log"
-paginate = "never"
-editor = "vim"

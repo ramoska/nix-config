@@ -1,0 +1,20 @@
+[user]
+name = "Irmantas Ramoška"
+email = {{ if eq .chezmoi.username "irmantas.ramoska" -}}
+  "irmantas.ramoska@ovoko.com"
+{{- else -}}
+  "i.ramoshka@gmail.com"
+{{- end }}
+
+[ui]
+default-command = "log"
+paginate = "never"
+editor = "vim"
+
+{{ if eq .chezmoi.username "irmantas.ramoska" -}}
+[signing]
+key = "542BC779FF7FB95A"
+backend = "gpg"
+behavior = "own"
+{{ end -}}
+
