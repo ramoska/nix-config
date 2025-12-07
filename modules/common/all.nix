@@ -22,6 +22,6 @@
     zoxide
     nushell
     tree
-    stow
+    chezmoi
   ];
 }
