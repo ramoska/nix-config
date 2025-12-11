@@ -13,6 +13,7 @@
     s3cmd
     tree
     k3d
+    k9s
     telepresence2
     kubernetes-helm
     yq
