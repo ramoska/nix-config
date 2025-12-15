@@ -48,8 +48,11 @@
     fuzzel
     hyprlock
     hypridle
+    pavucontrol
     
     ghostty
+    _1password-cli
+    _1password-gui
   ];
 
   services.pulseaudio.enable = false;
