@@ -49,6 +49,7 @@
     hyprlock
     hypridle
     pavucontrol
+    brightnessctl
     
     ghostty
     _1password-cli
