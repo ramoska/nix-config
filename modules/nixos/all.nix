@@ -19,6 +19,18 @@
     LC_TIME = "en_GB.UTF-8";
   };
 
+  systemd.user.services = {
+    swayidle = {
+      description = "Idle service";
+      after = [ "niri.service" ];
+      wantedBy = [ "graphical-session.target" ];
+      serviceConfig = {
+        ExecStart = "${pkgs.swayidle}/bin/swayidle";
+        Restart = "on-failure";
+      };
+    };
+  };
+
   services.xserver.xkb = {
     layout = "us";
     variant = "";
@@ -47,7 +59,7 @@
     waybar
     fuzzel
     hyprlock
-    hypridle
+    swayidle
     pavucontrol
     brightnessctl
     

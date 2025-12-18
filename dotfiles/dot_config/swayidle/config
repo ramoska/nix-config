@@ -1,0 +1,6 @@
+lock 'pidof hyprlock || /run/current-system/sw/bin/hyprlock' 
+timeout 30 '/run/current-system/sw/bin/brightnessctl -d :white:kbd_backlight -s set 0' resume '/run/current-system/sw/bin/brightnessctl -d :white:kbd_backlight -r'
+timeout 60 '/run/current-system/sw/bin/brightnessctl -s set 10%' resume '/run/current-system/sw/bin/brightnessctl -r'
+timeout 120 '/run/current-system/sw/bin/loginctl lock-session'
+timeout 300 '/run/current-system/sw/bin/niri msg action power-off-monitors' resume '/run/current-system/sw/bin/niri msg action power-on-monitors'
+
