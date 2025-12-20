@@ -8,9 +8,13 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nixos-hardware }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nixos-hardware, zen-browser }:
   {
     inherit nixpkgs;
     inherit nix-darwin;

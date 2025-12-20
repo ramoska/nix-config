@@ -1,8 +1,11 @@
 {{ if ne .chezmoi.os "linux" }}
-.config/Thunar
-.config/niri
 .config/ghostty
+.config/hypr
+.config/niri
+.config/swayidle
+.config/Thunar
 .config/waybar
+.local/bin/set-theme
 {{ end }}
 {{ if ne .chezmoi.os "darwin" }}
 Library/Application Support/com.mitchellh.ghostty/config

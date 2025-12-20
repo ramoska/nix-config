@@ -1,6 +1,10 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
+#  imports = [
+#    ./zen.nix
+#  ];
+
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.consoleLogLevel = 3;
@@ -26,6 +30,15 @@
       wantedBy = [ "graphical-session.target" ];
       serviceConfig = {
         ExecStart = "${pkgs.swayidle}/bin/swayidle";
+        Restart = "on-failure";
+      };
+    };
+    swww-deamon = {
+      description = "Deamon to manage wallpapers";
+      after = [ "niri.service" ];
+      wantedBy = [ "graphical-session.target" ];
+      serviceConfig = {
+        ExecStart = "${pkgs.swww}/bin/swww-daemon";
         Restart = "on-failure";
       };
     };
@@ -55,11 +68,12 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    dunst
+    dunst  # notification system
     waybar
-    fuzzel
-    hyprlock
-    swayidle
+    fuzzel  # launcher
+    hyprlock  # more customizable compared to swaylock
+    swayidle  # use of standard protocols compared t hypridle
+    swww  # deamon, will be 
     pavucontrol
     brightnessctl
     
@@ -67,6 +81,7 @@
     _1password-cli
     _1password-gui
   ];
+  environment.localBinInPath = true;
 
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;

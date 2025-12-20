@@ -1,0 +1,4 @@
+#!/usr/bin/env fish
+
+swww img ~/wallpapers/kenshin.jpg
+

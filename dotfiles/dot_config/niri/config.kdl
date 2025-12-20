@@ -55,8 +55,9 @@ layout {
 }
 
 spawn-at-startup "waybar"
+spawn-at-startup "set-theme"
 
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/Pictures/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
 window-rule {
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
