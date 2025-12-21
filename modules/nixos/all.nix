@@ -1,10 +1,6 @@
 { pkgs, inputs, ... }:
 
 {
-#  imports = [
-#    ./zen.nix
-#  ];
-
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.consoleLogLevel = 3;
@@ -81,6 +77,7 @@
     _1password-cli
     _1password-gui
   ];
+  
   environment.localBinInPath = true;
 
   services.pulseaudio.enable = false;

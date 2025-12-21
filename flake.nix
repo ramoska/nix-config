@@ -8,29 +8,32 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    zen-browser = {
-      url = "github:0xc000022070/zen-browser-flake";
+    nix-flatpak = {
+      url = "github:gmodena/nix-flatpak";
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nixos-hardware, zen-browser }:
+  outputs = inputs@{ self, nix-darwin, nixpkgs, nixos-hardware, nix-flatpak }:
   {
     inherit nixpkgs;
-    inherit nix-darwin;
-    inherit nixos-hardware;
 
-    commonModules = {
-      all = ./modules/common/all.nix;
+    mbp = {
+      imports = [
+        ./modules/common/all.nix
+        nixos-hardware.nixosModules.apple-t2
+        nix-flatpak.nixosModules.nix-flatpak
+        ./modules/nixos/all.nix
+        ./modules/nixos/flatpak.nix
+      ];
     };
 
-    darwinModules = {
-      all = ./modules/darwin/all.nix;
-      work = ./modules/darwin/work.nix;
-    };
-
-    nixosModules = {
-      all = ./modules/nixos/all.nix;
+    work = {
+      imports = [
+        ./modules/common/all.nix
+        ./modules/darwin/all.nix
+        ./modules/darwin/work.nix
+      ];
     };
   };
 }
