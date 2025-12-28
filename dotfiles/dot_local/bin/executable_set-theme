@@ -1,4 +1,8 @@
 #!/usr/bin/env fish
 
-swww img ~/wallpapers/kenshin.jpg
+if [ ! -d ~/.config/theme/current ]
+    ln -s ~/.config/theme/kenshin ~/.config/theme/current
+end
+
+swww img ~/.config/theme/current/wallpaper.jpg
 

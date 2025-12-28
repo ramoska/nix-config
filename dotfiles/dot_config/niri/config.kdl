@@ -54,7 +54,6 @@ layout {
     }
 }
 
-spawn-at-startup "waybar"
 spawn-at-startup "set-theme"
 
 screenshot-path "~/Pictures/Screenshot from %Y-%m-%d %H-%M-%S.png"

@@ -20,6 +20,15 @@
   };
 
   systemd.user.services = {
+    waybar = {
+      description = "Waybar service";
+      after = [ "niri.service" ];
+      wantedBy = [ "graphical-session.target" ];
+      serviceConfig = {
+        ExecStart = "${pkgs.waybar}/bin/waybar";
+        Restart = "on-failure";
+      };
+    };
     swayidle = {
       description = "Idle service";
       after = [ "niri.service" ];
@@ -61,6 +70,7 @@
   fonts.packages = with pkgs; [
     nerd-fonts.fira-code
     nerd-fonts.monaspace
+    nerd-fonts.jetbrains-mono
   ];
 
   environment.systemPackages = with pkgs; [

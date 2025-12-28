@@ -1,0 +1,45 @@
+@define-color background #060B1E;
+@define-color foreground #ffcead;
+
+* {
+  font-family: JetBrainsMono;
+  font-size: 18px;
+  min-height: 0;
+  color: @foreground;
+}
+
+window#waybar {
+  background-color: transparent;
+  color: @foreground;
+}
+
+#idle_inhibitor { min-width: 24px; }
+
+#tray,
+#language,
+#cpu, 
+#temperature, 
+#memory,
+#backlight,
+#wireplumber, 
+#disk,
+#battery, 
+#clock, 
+#idle_inhibitor,
+#taskbar,
+#bluetooth,
+#network {
+	padding: 0 10px;
+  background-color: @background;
+}
+
+#taskbar, #idle_inhibitor {
+  padding-right: 25px;
+  border-radius: 0 0 20px 0;
+}
+
+#language, #clock {
+  padding-left: 25px;
+  border-radius: 0 0 0 20px;
+}
+
