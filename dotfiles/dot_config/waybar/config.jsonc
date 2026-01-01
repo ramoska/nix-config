@@ -5,14 +5,22 @@
   "height": 32,
   "modules-left": ["wlr/taskbar"],
   "modules-center": ["clock", "idle_inhibitor"],
-  "modules-right": ["tray", "niri/language", "network", "bluetooth", "wireplumber", "battery", "cpu", "memory"],
+  "modules-right": ["tray", "niri/language", "network", "bluetooth", "wireplumber", "battery", "temperature", "cpu", "memory"],
   "wlr/taskbar": {
     "format": "{icon}",
     "icon-size": 24,
-
+    "icon-theme": "Papirus-Dark",
     "on-click": "activate",
     "tooltip": true,
-    "tooltip-format": "{title} | {app_id}"
+    "tooltip-format": "{title} | {name}",
+    "rewrite": {
+      "firefox": "firefox",
+      "Firefox": "firefox",
+      "Firefox Web Browser": "firefox"
+    },
+    "app_ids-mapping": {
+      "firefox": "firefox"
+    }
   },
   "idle_inhibitor": {
     "format": "{icon}",
@@ -31,7 +39,7 @@
     "format": "{:%Y-%m-%d %H:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
-
+  },
   "cpu": {
     "format": "{usage}% ",
     "tooltip": false
@@ -45,10 +53,10 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{capacity}% {icon}",
+    "format": "{icon}",
     "format-charging": "{capacity}% ",
     "format-plugged": "{capacity}% ",
-    "format-alt": "{time} {icon}",
+    "format-alt": "{capacity}% {icon}",
     "format-icons": ["", "", "", "", ""]
   },
   "network": {
@@ -62,7 +70,7 @@
   "wireplumber": {
     "format": "{volume}% {icon}",
     "format-muted": "",
-    "on-click": "pavucontrol",
+    "on-click": "/run/current-system/sw/bin/pavucontrol",
     "format-icons": ["", "", ""]
   },
   "niri/language": {

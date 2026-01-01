@@ -19,6 +19,7 @@
         nixos-hardware.nixosModules.apple-t2
         ./modules/common/all.nix
         ./modules/nixos/all.nix
+        ./modules/nixos/mbp.nix
       ];
     };
 

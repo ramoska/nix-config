@@ -86,6 +86,10 @@
     ghostty
     _1password-cli
     _1password-gui
+    
+    adwaita-icon-theme
+    papirus-icon-theme
+    hicolor-icon-theme
   ];
   
   environment.localBinInPath = true;
