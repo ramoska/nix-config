@@ -1,0 +1,93 @@
+@define-color background #060B1E;
+@define-color text #e6b7f7;
+@define-color accent-purple #b137dd;
+@define-color accent-grey #d5ede8;
+
+* {
+  font-family: "JetBrains Mono", sans-serif;
+  font-weight: 500;
+}
+
+.notification-row {
+  outline: none;
+  margin: 10px;
+  padding: 0;
+}
+
+.notification {
+  background: @background;
+  opacity: 0.7;
+  border: 2px solid @accent-purple;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  color: @text;
+}
+
+.notification-content {
+  border-left: 4px solid @accent-purple;
+  padding-left: 10px;
+}
+
+.notification-default-action:hover {
+  background: rgba(188, 36, 36, 0.1);
+}
+
+.summary {
+  color: @accent-purple;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.body {
+  color: @accent-grey;
+  font-size: 14px;
+}
+
+.control-center {
+  background: @background;
+  opacity: 0.7;
+  border-left: 3px solid @accent-purple;
+  color: @text-white;
+  padding: 20px;
+}
+
+.control-center-list {
+  background: transparent;
+}
+
+.widget-buttons-grid > button {
+  background: @background;
+  border: 1px solid @accent-purple;
+  border-radius: 5px;
+  color: @text;
+  margin: 5px;
+}
+
+.widget-buttons-grid > button:hover {
+  background: @accent-purple;
+  color: black;
+}
+
+.widget-dnd > switch {
+  background: @background;
+  border: 1px solid @accent-purple;
+  border-radius: 20px;
+}
+
+.widget-dnd > switch:checked {
+  background: @accent-purple;
+}
+
+#label-sep1, #label-sep2 {
+  background: @accent-grey;
+  margin: 15px 20px;
+  min-height: 2px;
+}
+
+#backlight-screen {
+  margin-top: 10px;
+  border-top: 2px solid #bc2424;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}

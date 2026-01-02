@@ -20,6 +20,16 @@
   };
 
   systemd.user.services = {
+    swaync = {
+      description = "Notifications service";
+      after = [ "niri.service" ];
+      wantedBy = [ "graphical-session.target" ];
+      serviceConfig = {
+        ExecStart = "${pkgs.swaynotificationcenter}/bin/swaync";
+        Restart = "on-failure";
+      };
+     
+    };
     swayidle = {
       description = "Idle service";
       after = [ "niri.service" ];
@@ -65,7 +75,8 @@
   ];
 
   environment.systemPackages = with pkgs; [
-    dunst  # notification system
+    swaynotificationcenter # notifications daemon
+    libnotify
     waybar
     fuzzel  # launcher
     hyprlock  # more customizable compared to swaylock
