@@ -2,8 +2,8 @@
   "reload_style_on_change": true,
   "layer": "top",
   "position": "top",
-  "height": 32,
-  "modules-left": ["wlr/taskbar"],
+  "height": 34,
+  "modules-left": ["group/power", "wlr/taskbar"],
   "modules-center": ["clock", "idle_inhibitor"],
   "modules-right": ["tray", "niri/language", "network", "bluetooth", "wireplumber", "battery", "temperature", "cpu", "memory"],
   "wlr/taskbar": {
@@ -70,6 +70,34 @@
   },
   "niri/language": {
     "format": "{shortDescription}"
+  },
+  "group/power": {
+    "orientation": "horizontal",
+    "drawer": {
+      "transition-duration": 500,
+      "children-class": "not-power",
+      "transition-left-to-right": true
+    },
+    "modules": [
+      "custom/power", // First element is the "parent" toggle
+      "custom/reboot",
+      "custom/logout"
+    ]
+  },
+  "custom/power": {
+    "format": "",
+    "on-click": "systemctl poweroff",
+    "tooltip": false
+  },
+  "custom/reboot": {
+    "format": "󰜉",
+    "on-click": "systemctl reboot",
+    "tooltip": false
+  },
+  "custom/logout": {
+    "format": "󰈆",
+    "on-click": "niri msg action quit", // Niri specific logout
+    "tooltip": false
   }
 }
 
