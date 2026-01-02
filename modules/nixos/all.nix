@@ -20,15 +20,6 @@
   };
 
   systemd.user.services = {
-    waybar = {
-      description = "Waybar service";
-      after = [ "niri.service" ];
-      wantedBy = [ "graphical-session.target" ];
-      serviceConfig = {
-        ExecStart = "${pkgs.waybar}/bin/waybar";
-        Restart = "on-failure";
-      };
-    };
     swayidle = {
       description = "Idle service";
       after = [ "niri.service" ];
@@ -87,9 +78,9 @@
     _1password-cli
     _1password-gui
     
+    librsvg
     adwaita-icon-theme
     papirus-icon-theme
-    hicolor-icon-theme
   ];
   
   environment.localBinInPath = true;
@@ -104,6 +95,7 @@
   };
 
   programs.firefox.enable = true;
+  programs.firefox.preferences = { "widget.wayland-dmabuf-vaapi.enabled" = true; };
 
   users.defaultUserShell = pkgs.fish;
   users.users.ramoska = {

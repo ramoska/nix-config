@@ -14,12 +14,7 @@
     "tooltip": true,
     "tooltip-format": "{title} | {name}",
     "rewrite": {
-      "firefox": "firefox",
-      "Firefox": "firefox",
-      "Firefox Web Browser": "firefox"
-    },
-    "app_ids-mapping": {
-      "firefox": "firefox"
+      "firefox": "com.mitchellh.ghostty"
     }
   },
   "idle_inhibitor": {
