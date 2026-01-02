@@ -13,8 +13,6 @@ window#waybar {
   color: @foreground;
 }
 
-#idle_inhibitor { min-width: 24px; }
-
 #tray,
 #language,
 #cpu, 
@@ -31,6 +29,8 @@ window#waybar {
 #network {
 	padding: 0 10px;
   background-color: @background;
+  opacity: 0.7;
+  min-width: 28px;
 }
 
 #taskbar, #idle_inhibitor {
