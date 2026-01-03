@@ -28,7 +28,6 @@
         ExecStart = "${pkgs.swaynotificationcenter}/bin/swaync";
         Restart = "on-failure";
       };
-     
     };
     swayidle = {
       description = "Idle service";
@@ -63,9 +62,22 @@
   };
 
   programs.niri.enable = true;
-  programs.regreet.enable = true;
   programs.thunar.enable = true;
   services.gvfs.enable = true;
+
+  services.greetd = {
+    enable = true;
+    settings = {
+      default_session = {
+        command = "${pkgs.tuigreet}/bin/tuigreet " +
+          "--time --remember --remember-session --asterisks " +
+          "--container-padding 2 " +
+          "--greeting 'Welcome to NixOS' " +
+          "--theme 'container=black;border=red;text=white;prompt=magenta;action=red;button=white;input=white'";
+        user = "greeter";
+      };
+    };
+  };
 
   fonts.fontconfig.enable = true;
   fonts.packages = with pkgs; [
@@ -81,9 +93,11 @@
     fuzzel  # launcher
     hyprlock  # more customizable compared to swaylock
     swayidle  # use of standard protocols compared t hypridle
-    swww  # deamon, will be 
+    swww  # deamon, will be used to change wallpaper on theme change
     pavucontrol
     brightnessctl
+
+    tuigreet  # login manager, replaces regreet since no compositor necessary
     
     ghostty
     _1password-cli
@@ -100,6 +114,7 @@
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
+    pulse.enable = true;
     alsa.enable = true;
     alsa.support32Bit = true;
     wireplumber.enable = true;
