@@ -38,12 +38,21 @@
         Restart = "on-failure";
       };
     };
-    swww-deamon = {
-      description = "Deamon to manage wallpapers";
+    swww-daemon = {
+      description = "Daemon to manage wallpapers";
       after = [ "niri.service" ];
       wantedBy = [ "graphical-session.target" ];
       serviceConfig = {
         ExecStart = "${pkgs.swww}/bin/swww-daemon";
+        Restart = "on-failure";
+      };
+    };
+    gammastep = {
+      description = "Daemon to manage color temperature";
+      after = [ "niri.service" ];
+      wantedBy = [ "graphical-session.target" ];
+      serviceConfig = {
+        ExecStart = "${pkgs.gammastep}/bin/gammastep";
         Restart = "on-failure";
       };
     };
@@ -96,6 +105,7 @@
     swww  # deamon, will be used to change wallpaper on theme change
     pavucontrol
     brightnessctl
+    gammastep  # color temp switch
 
     tuigreet  # login manager, replaces regreet since no compositor necessary
     
