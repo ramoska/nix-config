@@ -19,6 +19,7 @@
     yq
     jq
     hyperfine
+    gemini-cli
   ];
   homebrew = {
     casks = [
