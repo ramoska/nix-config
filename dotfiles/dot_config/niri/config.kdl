@@ -53,6 +53,7 @@ layout {
     }
 }
 
+spawn-at-startup "sh" "-c" "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=niri && systemctl --user stop xdg-desktop-portal xdg-desktop-portal-gtk && systemctl --user start xdg-desktop-portal xdg-desktop-portal-gtk"
 spawn-at-startup "set-theme"
 spawn-at-startup "waybar"
 spawn-at-startup "gammastep"
