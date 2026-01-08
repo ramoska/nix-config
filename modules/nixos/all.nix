@@ -47,15 +47,6 @@
         Restart = "on-failure";
       };
     };
-    gammastep = {
-      description = "Daemon to manage color temperature";
-      after = [ "niri.service" ];
-      wantedBy = [ "graphical-session.target" ];
-      serviceConfig = {
-        ExecStart = "${pkgs.gammastep}/bin/gammastep";
-        Restart = "on-failure";
-      };
-    };
   };
 
   services.xserver.xkb = {

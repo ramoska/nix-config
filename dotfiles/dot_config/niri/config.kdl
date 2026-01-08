@@ -55,6 +55,7 @@ layout {
 
 spawn-at-startup "set-theme"
 spawn-at-startup "waybar"
+spawn-at-startup "gammastep"
 
 screenshot-path "~/Pictures/Screenshot from %Y-%m-%d %H-%M-%S.png"
 
