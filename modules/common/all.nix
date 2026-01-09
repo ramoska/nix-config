@@ -23,5 +23,9 @@
     nushell
     tree
     chezmoi
+    ripgrep
+    glow
+    fd
+    eza
   ];
 }
