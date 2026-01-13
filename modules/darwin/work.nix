@@ -19,6 +19,7 @@
     yq
     jq
     hyperfine
+    bench
     gemini-cli
   ];
   homebrew = {
