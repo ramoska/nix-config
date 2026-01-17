@@ -1,0 +1,13 @@
+{
+  i18n.defaultLocale = "en_US.UTF-8";
+  i18n.extraLocaleSettings = {
+    LC_ADDRESS = "lt_LT.UTF-8";
+    LC_IDENTIFICATION = "lt_LT.UTF-8";
+    LC_MEASUREMENT = "lt_LT.UTF-8";
+    LC_MONETARY = "lt_LT.UTF-8";
+    LC_NAME = "lt_LT.UTF-8";
+    LC_PAPER = "lt_LT.UTF-8";
+    LC_TELEPHONE = "lt_LT.UTF-8";
+    LC_TIME = "en_GB.UTF-8";
+  };
+}

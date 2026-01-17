@@ -17,16 +17,16 @@
     mbp = {
       imports = [
         nixos-hardware.nixosModules.apple-t2
-        ./modules/common/all.nix
-        ./modules/nixos/all.nix
+        ./modules/common
+        ./modules/nixos
         ./modules/nixos/mbp.nix
       ];
     };
 
     work = {
       imports = [
-        ./modules/common/all.nix
-        ./modules/darwin/all.nix
+        ./modules/common
+        ./modules/darwin
         ./modules/darwin/work.nix
       ];
     };

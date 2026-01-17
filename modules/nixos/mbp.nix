@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }: 
+{ pkgs, lib, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -9,6 +9,8 @@
 
   hardware.bluetooth.enable = true;
   hardware.bluetooth.powerOnBoot = true;
+
+
 
   services.logind.settings.Login = {
     HandleLidSwitch = "poweroff";
