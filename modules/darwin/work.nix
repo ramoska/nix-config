@@ -9,7 +9,6 @@
     kubectl
     kubelogin-oidc
     google-cloud-sdk
-    tig
     s3cmd
     tree
     k3d
@@ -19,7 +18,6 @@
     yq
     jq
     hyperfine
-    bench
     gemini-cli
   ];
   homebrew = {
