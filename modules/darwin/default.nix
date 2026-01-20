@@ -9,6 +9,10 @@
   environment.systemPackages = with pkgs; [
     neovim
   ];
+  programs.fish.shellAliases = {
+    vi = "nvim";
+    vim = "nvim";
+  };
 
   homebrew = {
     enable = true;

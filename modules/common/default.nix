@@ -28,5 +28,14 @@
     glow
     fd
     eza
+
+    # for lazyvim
+    stdenv.cc
+    gnumake
+    cmake
+
+    # for editing nix files
+    nil
+    nixpkgs-fmt
   ];
 }
