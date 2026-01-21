@@ -33,6 +33,7 @@
     stdenv.cc
     gnumake
     cmake
+    tree-sitter
 
     # for editing nix and lua files
     nil
