@@ -34,8 +34,10 @@
     gnumake
     cmake
 
-    # for editing nix files
+    # for editing nix and lua files
     nil
     nixpkgs-fmt
+    lua-language-server
+    stylua
   ];
 }
