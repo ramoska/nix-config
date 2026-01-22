@@ -40,9 +40,11 @@ return {
 	},
 	{
 		"saghen/blink.cmp",
-		version = "*", -- Use a release tag to download pre-built binaries
 		opts = {
-			keymap = { preset = "default" },
+			keymap = {
+				preset = "default",
+				["<Tab>"] = { "select_and_accept" },
+			},
 			appearance = {
 				use_nvim_cmp_as_default = true,
 				nerd_font_variant = "mono",
@@ -52,8 +54,34 @@ return {
 			},
 			signature = { enabled = true },
 			completion = {
-				menu = { border = "rounded" },
-				documentation = { auto_show = true, window = { border = "rounded" } },
+				ghost_text = { enabled = false },
+
+				trigger = {
+					show_on_keyword = true,
+					show_on_trigger_character = true,
+					prefetch_on_insert_mode = true,
+				},
+
+				accept = { auto_brackets = { enabled = true } },
+
+				list = {
+					selection = {
+						preselect = true,
+						auto_insert = false,
+					},
+				},
+
+				menu = {
+					border = "rounded",
+					draw = {
+						columns = { { "label", "label_description", gap = 1 }, { "kind_icon", "kind" } },
+					},
+				},
+
+				documentation = {
+					auto_show = true,
+					window = { border = "rounded" },
+				},
 			},
 		},
 	},

@@ -28,11 +28,10 @@ return {
 			logo = string.rep("\n", 8) .. logo .. "\n\n"
 
 			require("dashboard").setup({
-				theme = "doom",
+				theme = "hyper",
 				config = {
 					header = vim.split(logo, "\n"),
-					center = {
-						{ desc = "󰊳 Update", group = "@property", action = "Lazy update", key = "u" },
+					shortcut = {
 						{ desc = " Files", group = "Label", action = "Telescope find_files", key = "f" },
 						{
 							desc = "󰄉 Projects",
@@ -72,5 +71,25 @@ return {
 				desc = "Buffer Local Keymaps (which-key)",
 			},
 		},
+	},
+	{
+		"echasnovski/mini.pairs",
+		event = "InsertEnter",
+		opts = {
+			mappings = {
+				["("] = { action = "open", pair = "()", neigh_pattern = "[^\\]." },
+				["["] = { action = "open", pair = "[]", neigh_pattern = "[^\\]." },
+				["{"] = { action = "open", pair = "{}", neigh_pattern = "[^\\]." },
+				[")"] = { action = "close", pair = "()", neigh_pattern = "[^\\]." },
+				["]"] = { action = "close", pair = "[]", neigh_pattern = "[^\\]." },
+				["}"] = { action = "close", pair = "{}", neigh_pattern = "[^\\]." },
+				['"'] = { action = "closeopen", pair = '""', neigh_pattern = "[^\\].", register = { cr = false } },
+				["'"] = { action = "closeopen", pair = "''", neigh_pattern = "[^\\].", register = { cr = false } },
+				["`"] = { action = "closeopen", pair = "``", neigh_pattern = "[^\\].", register = { cr = false } },
+			},
+		},
+		config = function(_, opts)
+			require("mini.pairs").setup(opts)
+		end,
 	},
 }

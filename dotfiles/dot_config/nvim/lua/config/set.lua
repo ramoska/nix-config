@@ -8,6 +8,7 @@ vim.opt.scrolloff = 8
 vim.opt.clipboard = "unnamedplus"
 vim.opt.fixeol = false
 vim.opt.eol = true
+vim.opt.lazyredraw = false
 vim.g.mapleader = " "
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
@@ -29,5 +30,17 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 				pcall(vim.cmd, "normal! zR")
 			end
 		end, 10)
+	end,
+})
+
+-- Blink plugin would move cursor back by single characer wihout following lines
+vim.api.nvim_create_autocmd("InsertEnter", {
+	callback = function()
+		vim.opt.virtualedit = "onemore"
+	end,
+})
+vim.api.nvim_create_autocmd("InsertLeave", {
+	callback = function()
+		vim.opt.virtualedit = ""
 	end,
 })
