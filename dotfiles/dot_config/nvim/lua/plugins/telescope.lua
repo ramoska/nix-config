@@ -48,6 +48,15 @@ return {
 			end
 
 			pcall(require("telescope").load_extension, "projects")
+
+			vim.api.nvim_create_autocmd("DirChanged", {
+				callback = function()
+					local ok, persistence = pcall(require, "persistence")
+					if ok then
+						persistence.load()
+					end
+				end,
+			})
 		end,
 	},
 }
