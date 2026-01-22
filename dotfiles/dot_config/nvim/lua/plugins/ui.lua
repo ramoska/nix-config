@@ -16,6 +16,7 @@ return {
 	{
 		"nvimdev/dashboard-nvim",
 		event = "VimEnter",
+		dependencies = { { "nvim-tree/nvim-web-devicons" } },
 		config = function()
 			local logo = [[
          ██╗      █████╗ ███████╗██╗   ██╗██╗   ██╗██╗███╗   ███╗          Z
@@ -28,10 +29,10 @@ return {
 			logo = string.rep("\n", 8) .. logo .. "\n\n"
 
 			require("dashboard").setup({
-				theme = "hyper",
+				theme = "doom",
 				config = {
 					header = vim.split(logo, "\n"),
-					shortcut = {
+					center = {
 						{ desc = " Files", group = "Label", action = "Telescope find_files", key = "f" },
 						{
 							desc = "󰄉 Projects",
@@ -45,7 +46,6 @@ return {
 				},
 			})
 		end,
-		dependencies = { { "nvim-tree/nvim-web-devicons" } },
 	},
 	{
 		"nvim-lualine/lualine.nvim",

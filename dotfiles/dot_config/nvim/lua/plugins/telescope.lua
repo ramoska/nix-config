@@ -32,7 +32,7 @@ return {
 		opts = {
 			manual_mode = false,
 			patterns = { ".jj" },
-			detection_methods = { "lsp", "pattern" },
+			detection_methods = { "pattern", "lsp" },
 		},
 		config = function(_, opts)
 			require("project_nvim").setup(opts)
