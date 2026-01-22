@@ -8,7 +8,7 @@
   networking.networkmanager.enable = true;
 
   environment.systemPackages = with pkgs; [
-    tuigreet  # login manager
+    tuigreet # login manager
 
     ghostty
     _1password-cli
@@ -21,9 +21,9 @@
     variant = "";
   };
 
-  services.gvfs.enable = true;  # gnome virtual filesystem to handle external storage
-  services.udisks2.enable = true;  # handles mounting USB drives
-  services.devmon.enable = true;  # auto-mount USB drives
+  services.gvfs.enable = true; # gnome virtual filesystem to handle external storage
+  services.udisks2.enable = true; # handles mounting USB drives
+  services.devmon.enable = true; # auto-mount USB drives
 
   services.greetd = {
     enable = true;
@@ -33,7 +33,7 @@
           "--time --remember --remember-session --asterisks " +
           "--container-padding 2 " +
           "--greeting 'Welcome to NixOS' " +
-          "--theme 'container=black;border=red;text=white;prompt=magenta;action=red;button=white;input=white'";
+          "--theme 'container=black;border=green;text=white;prompt=gray;action=white;button=gray;input=bright-white;time=gray;title=gray'";
         user = "greeter";
       };
     };
