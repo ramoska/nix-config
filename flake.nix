@@ -11,25 +11,39 @@
   };
 
   outputs = inputs@{ self, nix-darwin, nixpkgs, nixos-hardware }:
-  {
-    inherit nixpkgs nix-darwin;
+    {
+      inherit nixpkgs nix-darwin;
 
-    mbp = {
-      imports = [
-        nixos-hardware.nixosModules.apple-t2
-        ./modules/common
-        ./modules/nixos
-        ./modules/nixos/mbp.nix
-      ];
-    };
+      mbp = {
+        imports = [
+          nixos-hardware.nixosModules.apple-t2
+          ./modules/common
+          ./modules/nixos
+          ./modules/nixos/mbp.nix
+        ];
+      };
 
-    work = {
-      imports = [
-        ./modules/common
-        ./modules/darwin
-        ./modules/darwin/work.nix
-      ];
+      darwin = {
+        imports = [
+          ./modules/common
+          ./modules/darwin
+        ];
+      };
+
+      desktop = {
+        imports = [
+          ./modules/common
+          ./modules/nixos
+        ];
+      };
+
+      work = {
+        imports = [
+          ./modules/common
+          ./modules/darwin
+          ./modules/darwin/work.nix
+        ];
+      };
     };
-  };
 }
 
