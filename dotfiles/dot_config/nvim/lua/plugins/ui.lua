@@ -36,11 +36,19 @@ return {
 						{ desc = " Files", group = "Label", action = "Telescope find_files", key = "f" },
 						{
 							desc = "󰄉 Projects",
-							group = "DiagnosticHint",
+							group = "Label",
 							action = function()
 								require("telescope").extensions.projects.projects()
 							end,
 							key = "p",
+						},
+						{
+							desc = "󰦛 Sessions",
+							group = "Label",
+							action = function()
+								require("telescope").extensions.resession.resession()
+							end,
+							key = "s",
 						},
 					},
 				},

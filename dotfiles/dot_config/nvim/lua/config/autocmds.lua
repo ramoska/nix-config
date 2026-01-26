@@ -1,26 +1,3 @@
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.tabstop = 2
-vim.opt.shiftwidth = 2
-vim.opt.expandtab = true
-vim.opt.cursorline = true
-vim.opt.scrolloff = 8
-vim.opt.clipboard = "unnamedplus"
-vim.opt.fixeol = false
-vim.opt.eol = true
-vim.opt.lazyredraw = false
-vim.g.mapleader = " "
-
-vim.keymap.set("n", "<C-d>", "<C-d>zz")
-vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "n", "nzzzv")
-vim.keymap.set("n", "N", "Nzzzv")
-
-vim.opt.foldmethod = "expr"
-vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
-vim.opt.foldlevel = 99
-vim.opt.foldlevelstart = 99
-
 vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 	group = vim.api.nvim_create_augroup("OpenFolds", { clear = true }),
 	pattern = "*",
@@ -42,5 +19,20 @@ vim.api.nvim_create_autocmd("InsertEnter", {
 vim.api.nvim_create_autocmd("InsertLeave", {
 	callback = function()
 		vim.opt.virtualedit = ""
+	end,
+})
+
+-- resession autoloading/saving
+vim.api.nvim_create_autocmd("VimEnter", {
+	callback = function()
+		if vim.fn.argc() == 0 then
+			local resession = require("resession")
+			resession.load(vim.fn.getcwd(), { dir = "dirsession", silence_errors = true })
+		end
+	end,
+})
+vim.api.nvim_create_autocmd("VimLeavePre", {
+	callback = function()
+		require("resession").save(vim.fn.getcwd(), { dir = "dirsession", notify = false })
 	end,
 })
