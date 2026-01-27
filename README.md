@@ -21,7 +21,7 @@ This repository acts as a flake source (library) for configuring Darwin and NixO
 
 ### For macOS (Darwin)
 
-Create `/etc/nix-darwin/flake.nix`:
+Create `~/.nix-darwin/flake.nix`:
 
 ```nix
 {
@@ -55,13 +55,14 @@ Create `/etc/nix-darwin/flake.nix`:
 **Apply Configuration:**
 
 ```bash
-cd /etc/nix-darwin
-sudo nix --extra-experimental-features "nix-command flakes" run nix-darwin/master#darwin-rebuild -- switch
+cd ~/.nix-darwin
+nix --extra-experimental-features "nix-command flakes" flake update
 sudo nix --extra-experimental-features "nix-command flakes" run nix-darwin -- switch --flake .
 ```
 
 *Subsequent updates:*
 ```bash
+nix flake update
 sudo darwin-rebuild switch --flake .
 ```
 
@@ -118,7 +119,7 @@ After setting up the system, use `chezmoi` to manage dotfiles (start new termina
    ```
 
 1. **Apply configuration**
+   Assuming that repository is checked out as is in home dir
    ```fish
-   cd ~/nix-config/dotfiles
-   chezmoi apply -S .
+   chezmoi init --apply --source ~/nix-config/dotfiles
    ```
