@@ -15,7 +15,7 @@ return {
 	},
 	{
 		"nvimdev/dashboard-nvim",
-		event = "VimEnter",
+		lazy = false,
 		dependencies = { { "nvim-tree/nvim-web-devicons" } },
 		config = function()
 			local logo = [[
@@ -79,25 +79,5 @@ return {
 				desc = "Buffer Local Keymaps (which-key)",
 			},
 		},
-	},
-	{
-		"echasnovski/mini.pairs",
-		event = "InsertEnter",
-		opts = {
-			mappings = {
-				["("] = { action = "open", pair = "()", neigh_pattern = "[^\\]." },
-				["["] = { action = "open", pair = "[]", neigh_pattern = "[^\\]." },
-				["{"] = { action = "open", pair = "{}", neigh_pattern = "[^\\]." },
-				[")"] = { action = "close", pair = "()", neigh_pattern = "[^\\]." },
-				["]"] = { action = "close", pair = "[]", neigh_pattern = "[^\\]." },
-				["}"] = { action = "close", pair = "{}", neigh_pattern = "[^\\]." },
-				['"'] = { action = "closeopen", pair = '""', neigh_pattern = "[^\\].", register = { cr = false } },
-				["'"] = { action = "closeopen", pair = "''", neigh_pattern = "[^\\].", register = { cr = false } },
-				["`"] = { action = "closeopen", pair = "``", neigh_pattern = "[^\\].", register = { cr = false } },
-			},
-		},
-		config = function(_, opts)
-			require("mini.pairs").setup(opts)
-		end,
 	},
 }
