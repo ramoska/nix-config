@@ -21,18 +21,3 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 		vim.opt.virtualedit = ""
 	end,
 })
-
--- resession autoloading/saving
-vim.api.nvim_create_autocmd("VimEnter", {
-	callback = function()
-		if vim.fn.argc() == 0 then
-			local resession = require("resession")
-			resession.load(vim.fn.getcwd(), { dir = "dirsession", silence_errors = true })
-		end
-	end,
-})
-vim.api.nvim_create_autocmd("VimLeavePre", {
-	callback = function()
-		require("resession").save(vim.fn.getcwd(), { dir = "dirsession", notify = false })
-	end,
-})
