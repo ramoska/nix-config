@@ -13,6 +13,7 @@
     ghostty
     _1password-cli
     _1password-gui
+    protonvpn-gui
   ];
   environment.localBinInPath = true;
 

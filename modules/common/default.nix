@@ -32,6 +32,7 @@
     eza # replace ls
     yq
     jq
+    proton-vpn-cli
 
     beam28Packages.erlang
     beam28Packages.elixir_1_19
