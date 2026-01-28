@@ -14,7 +14,7 @@
     {
       inherit nixpkgs nix-darwin;
 
-      mbp = {
+      mbp-nixos = {
         imports = [
           nixos-hardware.nixosModules.apple-t2
           ./modules/common
@@ -23,10 +23,11 @@
         ];
       };
 
-      darwin = {
+      mbp-darwin = {
         imports = [
           ./modules/common
           ./modules/darwin
+          ./modules/darwin/personal.nix
         ];
       };
 
