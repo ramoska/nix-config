@@ -55,6 +55,10 @@
         name = "sequel-ace";
         greedy = true;
       }
+      {
+        name = "claude-code";
+        greedy = true;
+      }
     ];
   };
 }
