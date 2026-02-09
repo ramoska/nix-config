@@ -15,6 +15,7 @@
     telepresence2
     kubernetes-helm
     hyperfine
+    lazydocker
 
     # Language servers
     gopls # Go LSP
