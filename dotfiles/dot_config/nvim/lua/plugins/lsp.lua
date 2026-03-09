@@ -30,7 +30,7 @@ return {
 			setup_server("gopls", "gopls")
 			setup_server("pyright", "pyright-langserver")
 			setup_server("phpactor", "phpactor")
-			setup_server("elixirls", "lexical")
+			setup_server("elixirls", "expert")
 			setup_server("ts_ls", "typescript-language-server")
 			setup_server("html", "vscode-html-language-server")
 			setup_server("cssls", "vscode-css-language-server")

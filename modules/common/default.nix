@@ -53,7 +53,7 @@
     python314Packages.python-lsp-server # Python LSP
     yaml-language-server # YAML LSP
     erlang-language-platform
-    lexical
+    beam28Packages.expert
 
     # Tree-sitter parsers
     vimPlugins.nvim-treesitter-parsers.fish
