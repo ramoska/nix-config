@@ -7,10 +7,18 @@ return {
 		},
 		cmd = "Telescope",
 		keys = {
-			{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "Find Files" },
-			{ "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "Live Grep" },
-			{ "<leader>fp", "<cmd>Telescope projects<cr>", desc = "Projects" },
-			{ "<leader>fs", "<cmd>Telescope resession<cr>", desc = "Sessions" },
+			{ "<leader>ff", "<cmd>Telescope find_files<cr>", desc = "[F]ind [F]iles" },
+			{ "<leader>fg", "<cmd>Telescope live_grep<cr>", desc = "[F]ind by [G]rep" },
+			{ "<leader>fp", "<cmd>Telescope projects theme=dropdown<cr>", desc = "[F]ind [P]rojects" },
+			{ "<leader>fs", "<cmd>Telescope resession theme=dropdown<cr>", desc = "[F]ind [S]essions" },
+			{ "<leader>fh", "<cmd>Telescope help_tags<cr>", desc = "[F]ind [H]elp" },
+			{ "<leader>fk", "<cmd>Telescope keymaps<cr>", desc = "[F]ind [K]eymaps" },
+			{ "<leader>fb", "<cmd>Telescope builtin<cr>", desc = "[F]ind Telescope [B]uiltin" },
+			{ "<leader>fw", "<cmd>Telescope grep_string<cr>", mode = { "n", "v" }, desc = "[F]ind current [W]ord" },
+			{ "<leader>fd", "<cmd>Telescope diagnostics<cr>", desc = "[F]ind [D]iagnostics" },
+			{ "<leader>fr", "<cmd>Telescope resume<cr>", desc = "[F]ind [R]esume" },
+			{ "<leader>f.", "<cmd>Telescope oldfiles<cr>", desc = '[F]ind Recent Files ("." for repeat)' },
+			{ "<leader>fc", "<cmd>Telescope commands<cr>", desc = "[F]ind [C]ommands" },
 		},
 		opts = {
 			defaults = {

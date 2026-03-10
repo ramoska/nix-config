@@ -9,15 +9,3 @@ vim.api.nvim_create_autocmd({ "BufWinEnter" }, {
 		end, 10)
 	end,
 })
-
--- Blink plugin would move cursor back by single characer wihout following lines
-vim.api.nvim_create_autocmd("InsertEnter", {
-	callback = function()
-		vim.opt.virtualedit = "onemore"
-	end,
-})
-vim.api.nvim_create_autocmd("InsertLeave", {
-	callback = function()
-		vim.opt.virtualedit = ""
-	end,
-})
