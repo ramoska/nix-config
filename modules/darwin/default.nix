@@ -40,10 +40,6 @@
         name = "spotify";
         greedy = true;
       }
-      {
-        name = "obsidian";
-        greedy = true;
-      }
     ];
     onActivation = {
       cleanup = "zap";

@@ -14,8 +14,6 @@
 
   environment.systemPackages = with pkgs; [
     fastfetch
-    gemini-cli
-
     btop
     jujutsu
     openssh
@@ -32,6 +30,7 @@
     eza # replace ls
     yq
     jq
+    logseq
 
     beam28Packages.erlang
     beam28Packages.elixir_1_19
