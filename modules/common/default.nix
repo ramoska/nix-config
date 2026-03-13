@@ -31,6 +31,7 @@
     yq
     jq
     logseq
+    tmux
 
     beam28Packages.erlang
     beam28Packages.elixir_1_19
