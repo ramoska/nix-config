@@ -1,10 +1,6 @@
-{ pkgs, ... }:
+{ ... }:
 
 {
-  environment.systemPackages = with pkgs; [
-    qmk
-    qmk_hid
-  ];
   homebrew = {
     casks = [
       {
