@@ -15,6 +15,8 @@
     _1password-gui
     proton-vpn-cli
     protonvpn-gui
+
+    ungoogled-chromium
   ];
   environment.localBinInPath = true;
 

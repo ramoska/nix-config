@@ -40,6 +40,10 @@
         name = "spotify";
         greedy = true;
       }
+      {
+        name = "ungoogled-chromium";
+        greedy = true;
+      }
     ];
     onActivation = {
       cleanup = "zap";
