@@ -4,5 +4,5 @@ if [ ! -d ~/.config/theme/current ]
     ln -s ~/.config/theme/kenshin ~/.config/theme/current
 end
 
-swww img ~/.config/theme/current/wallpaper.jpg
+awww img ~/.config/theme/current/wallpaper.jpg
 

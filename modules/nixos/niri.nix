@@ -8,14 +8,14 @@
     swaynotificationcenter # notifications daemon
     libnotify
     waybar
-    fuzzel  # launcher
-    hyprlock  # more customizable compared to swaylock
-    swayidle  # use of standard protocols compared t hypridle
-    swww  # deamon, will be used to change wallpaper on theme change
+    fuzzel # launcher
+    hyprlock # more customizable compared to swaylock
+    swayidle # use of standard protocols compared t hypridle
+    awww # deamon, will be used to change wallpaper on theme change
     brightnessctl
-    gammastep  # color temp switch
+    gammastep # color temp switch
 
-    librsvg  # render svg
+    librsvg # render svg
     adwaita-icon-theme
     papirus-icon-theme
   ];
@@ -39,12 +39,12 @@
         Restart = "on-failure";
       };
     };
-    swww-daemon = {
+    awww-daemon = {
       description = "Daemon to manage wallpapers";
       after = [ "niri.service" ];
       wantedBy = [ "graphical-session.target" ];
       serviceConfig = {
-        ExecStart = "${pkgs.swww}/bin/swww-daemon";
+        ExecStart = "${pkgs.awww}/bin/awww-daemon";
         Restart = "on-failure";
       };
     };
