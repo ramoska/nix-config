@@ -9,7 +9,7 @@
     kubectl
     kubelogin-oidc
     google-cloud-sdk
-    s3cmd
+    rclone
     k3d
     k9s
     telepresence2
