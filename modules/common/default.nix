@@ -21,7 +21,6 @@
     fzf
     atuin # replece history
     zoxide # replace cd
-    nushell
     tree
     chezmoi
     ripgrep
