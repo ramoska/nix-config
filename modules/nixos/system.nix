@@ -15,6 +15,7 @@
     _1password-gui
     proton-vpn-cli
     proton-vpn
+    logseq
 
     ungoogled-chromium
   ];

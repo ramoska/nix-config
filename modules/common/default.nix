@@ -29,7 +29,6 @@
     eza # replace ls
     yq
     jq
-    logseq
     tmux
     zellij
 
