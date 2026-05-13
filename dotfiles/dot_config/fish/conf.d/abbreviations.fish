@@ -1,0 +1,5 @@
+abbr -a l 'eza -lh --icons=auto'
+abbr -a ls 'eza --icons=auto'
+abbr -a ll 'eza -lgh --icons=auto'
+abbr -a la 'eza -lagh --icons=auto'
+abbr -a lt 'eza --tree --icons=auto'
