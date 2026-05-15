@@ -21,6 +21,7 @@
     gopls # Go LSP
     typescript-language-server # TypeScript/JavaScript LSP
     phpactor # PHP LSP
+    intelephense # PHP LSP used by claude-code oficial PHP LSP plugin
 
     # Tree-sitter parsers
     vimPlugins.nvim-treesitter-parsers.go
