@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
   security.pam.services.sudo_local.touchIdAuth = true;
@@ -17,7 +17,10 @@
   homebrew = {
     enable = true;
     taps = [
-      "nikitabobko/tap"
+      {
+        name = "nikitabobko/tap";
+        trusted = true;
+      }
     ];
     casks = [
       {
