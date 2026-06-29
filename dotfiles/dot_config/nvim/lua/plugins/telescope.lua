@@ -33,12 +33,6 @@ return {
 		config = function(_, opts)
 			require("telescope").setup(opts)
 			require("telescope").load_extension("fzf")
-			vim.api.nvim_create_autocmd("FileType", {
-				pattern = "TelescopePrompt",
-				callback = function()
-					vim.opt_local.virtualedit = "onemore"
-				end,
-			})
 		end,
 	},
 	{

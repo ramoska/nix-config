@@ -11,6 +11,8 @@ vim.opt.eol = true
 vim.opt.lazyredraw = false
 vim.g.mapleader = " "
 
+vim.opt.virtualedit = "onemore"
+
 vim.opt.foldmethod = "expr"
 vim.opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
 vim.opt.foldlevel = 99

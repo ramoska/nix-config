@@ -20,6 +20,8 @@ return {
 					local opts = { buffer = args.buf }
 
 					vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+					vim.keymap.set("n", "gI", "<cmd>Telescope lsp_implementations<cr>", opts)
+					vim.keymap.set("n", "gr", "<cmd>Telescope lsp_references<cr>", opts)
 					vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
 					vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, opts)
 					vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
@@ -29,6 +31,7 @@ return {
 			setup_server("nil_ls", "nil")
 			setup_server("gopls", "gopls")
 			setup_server("pyright", "pyright-langserver")
+			setup_server("pylsp", "pylsp")
 			setup_server("phpactor", "phpactor")
 			setup_server("elixirls", "expert")
 			setup_server("ts_ls", "typescript-language-server")
@@ -36,6 +39,8 @@ return {
 			setup_server("cssls", "vscode-css-language-server")
 			setup_server("jsonls", "vscode-json-language-server")
 			setup_server("lua_ls", "lua-language-server")
+			setup_server("yamlls", "yaml-language-server")
+			setup_server("marksman", "marksman")
 		end,
 	},
 	{
