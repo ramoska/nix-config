@@ -50,7 +50,7 @@ return {
 				lua = { "stylua" },
 				php = { "php_cs_fixer" },
 				go = { "gofmt", "goimports" },
-				python = { "black" },
+				python = { "ruff_format" },
 				nix = { "nixpkgs_fmt" },
 			},
 			format_on_save = {
