@@ -3,13 +3,15 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local function setup_server(server_name, cmd_name)
+			-- Updated helper to accept an optional configuration settings block
+			local function setup_server(server_name, cmd_name, custom_opts)
 				if vim.fn.executable(cmd_name) == 1 then
+					local opts = custom_opts or {}
 					if vim.lsp.config then
-						vim.lsp.config(server_name, {})
+						vim.lsp.config(server_name, opts)
 						vim.lsp.enable(server_name)
 					else
-						require("lspconfig")[server_name].setup({})
+						require("lspconfig")[server_name].setup(opts)
 					end
 				end
 			end
@@ -30,8 +32,6 @@ return {
 
 			setup_server("nil_ls", "nil")
 			setup_server("gopls", "gopls")
-			setup_server("pyright", "pyright-langserver")
-			setup_server("pylsp", "pylsp")
 			setup_server("phpactor", "phpactor")
 			setup_server("elixirls", "expert")
 			setup_server("ts_ls", "typescript-language-server")
@@ -41,6 +41,21 @@ return {
 			setup_server("lua_ls", "lua-language-server")
 			setup_server("yamlls", "yaml-language-server")
 			setup_server("marksman", "marksman")
+
+			setup_server("pylsp", "pylsp", {
+				settings = {
+					pylsp = {
+						plugins = {
+							pycodestyle = { enabled = false },
+							pyflakes = { enabled = false },
+							mccabe = { enabled = false },
+							preload = { enabled = false },
+							autopep8 = { enabled = false },
+							yapf = { enabled = false },
+						},
+					},
+				},
+			})
 		end,
 	},
 	{
