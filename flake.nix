@@ -14,7 +14,7 @@
     };
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs, nixos-hardware, hunk }:
+  outputs = { nix-darwin, nixpkgs, nixos-hardware, ... }:
     {
       inherit nixpkgs nix-darwin;
 
