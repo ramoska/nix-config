@@ -1,4 +1,4 @@
-{ pkgs, inputs, ... }:
+{ pkgs, ... }:
 
 {
   environment.systemPackages = with pkgs; [
@@ -30,8 +30,6 @@
     vimPlugins.nvim-treesitter-parsers.typescript
     vimPlugins.nvim-treesitter-parsers.twig
     vimPlugins.nvim-treesitter-parsers.html
-
-    inputs.hunk.packages.${pkgs.stdenv.hostPlatform.system}.hunk
   ];
   homebrew = {
     casks = [
@@ -63,6 +61,9 @@
         name = "claude-code";
         greedy = true;
       }
+    ];
+    brews = [
+      "hunk"
     ];
   };
 }

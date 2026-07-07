@@ -29,7 +29,7 @@
     eza # replace ls
     yq
     jq
-    tmux
+    herdr
     zellij
 
     beam28Packages.erlang
