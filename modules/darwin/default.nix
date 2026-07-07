@@ -16,7 +16,17 @@
 
   homebrew = {
     enable = true;
+    taps = [
+      {
+        name = "nikitabobko/tap";
+        trusted = true;
+      }
+    ];
     casks = [
+      {
+        name = "aerospace";
+        greedy = true;
+      }
       {
         name = "zen";
         greedy = true;

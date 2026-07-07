@@ -32,17 +32,7 @@
     vimPlugins.nvim-treesitter-parsers.html
   ];
   homebrew = {
-    taps = [
-      {
-        name = "barutsrb/tap";
-        trusted = true;
-      }
-    ];
     casks = [
-      {
-        name = "omniwm";
-        greedy = true;
-      }
       {
         name = "phpstorm";
         greedy = true;
