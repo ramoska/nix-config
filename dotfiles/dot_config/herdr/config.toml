@@ -1,0 +1,18 @@
+onboarding = false
+[ui.sound]
+enabled = false
+
+[theme]
+light_name = "terminal"
+dark_name = "nord"
+auto_switch = true
+
+[ui.toast]
+delivery = "system"
+
+[ui]
+show_agent_labels_on_pane_borders = false
+agent_panel_sort = "spaces"
+
+[experimental]
+kitty_graphics = true
