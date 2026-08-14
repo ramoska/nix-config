@@ -64,6 +64,7 @@
     ];
     brews = [
       "hunk"
+      "logcli"
     ];
   };
 }
