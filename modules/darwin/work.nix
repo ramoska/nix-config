@@ -16,6 +16,7 @@
     kubernetes-helm
     hyperfine
     lazydocker
+    prometheus
 
     # Language servers
     gopls # Go LSP
