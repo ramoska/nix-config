@@ -32,6 +32,17 @@
     vimPlugins.nvim-treesitter-parsers.twig
     vimPlugins.nvim-treesitter-parsers.html
   ];
+  launchd.user.agents.colima = {
+    serviceConfig = {
+      ProgramArguments = [
+        "/bin/sh"
+        "-c"
+        ''${pkgs.colima}/bin/colima start >> "$HOME/Library/Logs/colima.log" 2>> "$HOME/Library/Logs/colima.err.log"''
+      ];
+      RunAtLoad = true;
+    };
+  };
+
   homebrew = {
     casks = [
       {
