@@ -63,8 +63,6 @@ return {
 		opts = {
 			formatters_by_ft = {
 				lua = { "stylua" },
-				php = { "phpcbf" },
-				go = { "gofmt", "goimports" },
 				python = { "ruff_format" },
 				nix = { "nixpkgs_fmt" },
 			},
