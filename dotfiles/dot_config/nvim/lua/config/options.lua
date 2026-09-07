@@ -10,6 +10,7 @@ vim.opt.fixeol = false
 vim.opt.eol = true
 vim.opt.lazyredraw = false
 vim.g.mapleader = " "
+vim.opt.exrc = true
 
 vim.opt.virtualedit = "onemore"
 
