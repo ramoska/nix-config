@@ -47,10 +47,6 @@
         name = "ungoogled-chromium";
         greedy = true;
       }
-      {
-        name = "logseq";
-        greedy = true;
-      }
     ];
     onActivation = {
       cleanup = "zap";

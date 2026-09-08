@@ -30,7 +30,8 @@
     yq
     jq
     herdr
-    zellij
+
+    zk
 
     beam28Packages.erlang
     beam28Packages.elixir_1_19
@@ -52,6 +53,7 @@
     python314Packages.python-lsp-server # Python LSP
     yaml-language-server # YAML LSP
     erlang-language-platform
+    elixir-ls
     beam28Packages.expert
 
     # Tree-sitter parsers
