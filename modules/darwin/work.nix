@@ -17,6 +17,7 @@
     hyperfine
     lazydocker
     prometheus
+    glab
 
     # Language servers
     gopls # Go LSP
