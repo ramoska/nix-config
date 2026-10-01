@@ -29,7 +29,7 @@
     eza # replace ls
     yq
     jq
-    herdr
+    superfile
 
     zk
 
