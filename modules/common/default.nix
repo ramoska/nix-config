@@ -19,11 +19,11 @@
     openssh
     git
     fzf
-    atuin # replece history
+    atuin # replace history
     zoxide # replace cd
     tree
     chezmoi
-    ripgrep
+    ripgrep # replace grep
     glow # markdown render in CLI
     fd # replace find
     eza # replace ls
@@ -31,7 +31,7 @@
     jq
     superfile
 
-    zk
+    zk # logseq alternative
 
     beam28Packages.erlang
     beam28Packages.elixir_1_19
