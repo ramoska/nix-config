@@ -11,6 +11,11 @@
     nix-direnv.enable = true;
   };
   programs.fish.enable = true;
+  programs.fish.interactiveShellInit = ''
+    if [ -n "$REX_BIN_DIR" ]
+      export PATH="$REX_BIN_DIR:$PATH"
+    end
+  '';
 
   environment.systemPackages = with pkgs; [
     fastfetch
