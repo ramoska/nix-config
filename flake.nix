@@ -23,6 +23,14 @@
         ];
       };
 
+      mbp-darwin = {
+        imports = [
+          ./modules/common
+          ./modules/darwin
+          ./modules/darwin/personal.nix
+        ];
+      };
+
       desktop = {
         imports = [
           ./modules/common
