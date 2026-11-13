@@ -16,6 +16,7 @@
 
   homebrew = {
     enable = true;
+    enableFishIntegration = true;
     taps = [
       {
         name = "nikitabobko/tap";
@@ -45,6 +46,14 @@
       }
       {
         name = "ungoogled-chromium";
+        greedy = true;
+      }
+      {
+        name = "1password";
+        greedy = true;
+      }
+      {
+        name = "1password-cli";
         greedy = true;
       }
     ];
